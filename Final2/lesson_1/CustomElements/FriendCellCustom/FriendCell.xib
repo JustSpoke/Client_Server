@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" rowHeight="59" id="6TF-ce-6Q1" customClass="FriendTableViewCell" customModule="lesson_1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="448" height="59"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6TF-ce-6Q1" id="6ER-7u-ifn">
+                <rect key="frame" x="0.0" y="0.0" width="448" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOn-IB-DI4">
+                        <rect key="frame" x="79" y="0.0" width="41.5" height="59"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="582-vD-Ld7" customClass="IconView" customModule="lesson_1" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="59" height="59"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="59" id="3tJ-F0-34H"/>
+                            <constraint firstAttribute="height" constant="59" id="8fH-bR-DJP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="aOn-IB-DI4" firstAttribute="leading" secondItem="582-vD-Ld7" secondAttribute="trailing" constant="20" id="1rd-MQ-UZ6"/>
+                    <constraint firstAttribute="bottom" secondItem="582-vD-Ld7" secondAttribute="bottom" id="XcX-YN-EnU"/>
+                    <constraint firstItem="582-vD-Ld7" firstAttribute="leading" secondItem="6ER-7u-ifn" secondAttribute="leading" id="Yd1-oo-bst"/>
+                    <constraint firstAttribute="bottom" secondItem="aOn-IB-DI4" secondAttribute="bottom" id="n1W-0B-S2D"/>
+                    <constraint firstItem="aOn-IB-DI4" firstAttribute="top" secondItem="6ER-7u-ifn" secondAttribute="top" id="olN-7P-aaE"/>
+                    <constraint firstItem="582-vD-Ld7" firstAttribute="top" secondItem="6ER-7u-ifn" secondAttribute="top" id="taQ-Ba-oXM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="friendImage" destination="582-vD-Ld7" id="cKB-Qy-x8J"/>
+                <outlet property="friendName" destination="aOn-IB-DI4" id="m7G-wK-DPD"/>
+            </connections>
+            <point key="canvasLocation" x="69.565217391304358" y="-16.40625"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
