@@ -7,7 +7,7 @@
 
 import Foundation
 
-//MARK: Requests
+//MARK: - Requests
 enum Requests {
 	case friends
 	case photos
@@ -24,7 +24,7 @@ protocol ServiceManagerProtocol  {
 	func loadData(scenario: Requests)
 }
 
-//MARK: WebRequest
+//MARK: - WebRequest
 final class URLServices: ServiceManagerProtocol {
 	
 	func loadRequests() -> URLRequest {
@@ -51,7 +51,7 @@ final class URLServices: ServiceManagerProtocol {
 		else {
 			return
 		}
-//MARK: Configuration params
+//MARK: - Configuration params
 		let configuration = URLSessionConfiguration.default
 		let session = URLSession(configuration: configuration)
 		var urlComponents = URLComponents()
@@ -59,7 +59,7 @@ final class URLServices: ServiceManagerProtocol {
 		urlComponents.host = "api.vk.com"
 		urlComponents.queryItems = [
 			URLQueryItem(name: "access_token", value: token),
-			URLQueryItem(name: "v", value: "5.68")
+			URLQueryItem(name: "v", value: "5.81")
 		]
 		
 		switch scenario {
@@ -79,7 +79,8 @@ final class URLServices: ServiceManagerProtocol {
 			urlComponents.queryItems?.append(URLQueryItem(name: "q", value: "Funny"))
 			urlComponents.queryItems?.append(URLQueryItem(name: "type", value: "group"))
 		}
-		//JSON
+		
+//MARK: - JSON
 		let task = session.dataTask(with: urlComponents.url!) { (data, response, error)  in
 			guard let data = data,
 				  let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.fragmentsAllowed)

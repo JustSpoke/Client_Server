@@ -53,7 +53,7 @@ extension VKAuth: WKNavigationDelegate {
 				return dict
 			}
 		
-		//MARK: Segue to TabBar
+		//MARK: - Segue to TabBar
 		if let token = params["access_token"] {
 			session.token = token
 			
